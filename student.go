@@ -36,13 +36,14 @@ func addStudent(students []Student) []Student {
 		Age: 20,
 		Score: 50.0,
 	}
+	fmt.Println(a,b,c,d)
 }
 
 func displayStudents(students []Student) {
 
 }
 
-func Student() {
+func dent() {
 	students := []Student{}
 	for {
 		menu()
