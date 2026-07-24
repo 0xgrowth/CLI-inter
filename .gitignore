@@ -1,0 +1,11 @@
+# Binaries
+student-manager
+*.exe
+*.out
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
