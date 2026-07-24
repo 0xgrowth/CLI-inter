@@ -2,6 +2,7 @@
 student-manager
 *.exe
 *.out
+go.mod
 
 # IDE files
 .vscode/
