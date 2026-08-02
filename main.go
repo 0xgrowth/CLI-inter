@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 )
+
 func menu() {
 	r := `==== Student Manager ====
 
@@ -17,27 +18,33 @@ func menu() {
 }
 
 func main(){
-	Dent()
+	students := []Student{}
 	for {
 		menu()
-	
+		var choice int
+
+		fmt.Print("Select: ")
+		if _, err := fmt.Scan(&choice); err != nil {
+			fmt.Println("Invalid Input.")
+			continue
+		}
 		// read user's choice
 	
 		switch choice {
 		case 1:
 			// add
-			time.Sleep(time.Second)
 			students = addStudent(students)
+			time.Sleep(time.Second)
 		case 2:
 			// view
-			if len(students) == 0 {
-				fmt.Println("No students found.")
-				time.Sleep(time.Second)
-				return
-			}
-			displayStudents(student)
-		case 6:
+			displayStudents(students)
+			time.Sleep(time.Second)
+		case 3:
+			fmt.Println("Goodbye!")
 			return
+		default:
+			fmt.Println("Invalid Option.")
+			time.Sleep(time.Second)
 		}
 	}
 }
