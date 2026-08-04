@@ -31,26 +31,21 @@ func addStudent(students []Student) []Student {
 		return students
 	}
 
-    fmt.Print("Enter student age: ")
-	fmt.Scan(&student.Age)
+	fmt.Print("Enter student age: ")
 	if _, err := fmt.Scan(&student.Age); err != nil {
 		fmt.Println("Invalid age.")
 		return students
 	}
-	
 	if student.Age <= 0 {
 		fmt.Println("Age must be positive.")
 		return students
 	}
-
-
-    fmt.Print("Enter student score: ")
-    fmt.Scan(&student.Score)
+	
+	fmt.Print("Enter student score: ")
 	if _, err := fmt.Scan(&student.Score); err != nil {
 		fmt.Println("Invalid score.")
 		return students
 	}
-	
 	if student.Score < 0 || student.Score > 100 {
 		fmt.Println("Score must be between 0 and 100.")
 		return students
